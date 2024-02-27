@@ -1,21 +1,24 @@
 #include <stdio.h>
-
 /**
- * main - Entry point
- * Return: 0 (Successful)
-*/
+ *main - Entry Point
+ *Description: Write a program that prints all possible
+ *combinations of single-digit numbers.
+ *Return: 0 (sucessful)
+ */
 int main(void)
 {
-	for (int i = 0; i < 10; i++)
+	int c = 0;
+
+	for (; c < 10; c++)
 	{
-		putchar(i + '0');
-		if (i < 9)
+		putchar('0' + c);
+		if (c != 9)
 		{
 			putchar(',');
 			putchar(' ');
 		}
+
 	}
-	putchar (10);
+	putchar('\n');
 	return (0);
 }
-
