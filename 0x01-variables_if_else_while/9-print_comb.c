@@ -1,21 +1,27 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ * Return: 0 (Successful)
+*/
 int main(void)
 {
-    int i;
+	for (int i = 0; i < 10; i++)
+		{
+		for (int j = i; j < 10; j++)
+		{
+			putchar(i + '0');
+			putchar(',');
+			putchar(' ');
+			putchar(j + '0');
+			if (i != 9 || j != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
 
-    for (i = 0; i < 10; i++)
-    {
-        putchar(i + '0');  // Print the current digit
-
-        if (i < 9)
-        {
-            putchar(',');   // Print the comma
-            putchar(' ');   // Print the space
-        }
-    }
-
-    putchar('\n');  // Print a newline character
-
-    return 0;
+	putchar (10);
+	return (0);
 }
