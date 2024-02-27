@@ -1,26 +1,40 @@
 #include <stdio.h>
 
+/**
+ * c - Print a two-digit number.
+ * @num: The number to be printed.
+ */
+void c(int num)
+{
+	putchar((num / 10) + '0');
+	putchar((num % 10) + '0');
+}
+
+/**
+ * main - Entry point
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    for (int i = 0; i < 100; i++)
-    {
-        for (int j = i; j < 100; j++)
-        {
-            putchar(i / 10 + '0');
-            putchar(i % 10 + '0');
-            putchar(' ');
-            putchar(j / 10 + '0');
-            putchar(j % 10 + '0');
+	int i, j;
 
-            if (i < 99) // Check if it's not the last combination
-            {
-                putchar(',');
-                putchar(' ');
-            }
-        }
-    }
+	for (i = 0; i < 10; i++)
+	{
+		for (j = 0; j <= i; j++)
+		{
+			c(j);
+			putchar(' ');
+			c(i);
 
-    putchar('\n');
+			if (i != 99)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
 
-    return 0;
+	putchar('\n');
+
+	return (0);
 }
