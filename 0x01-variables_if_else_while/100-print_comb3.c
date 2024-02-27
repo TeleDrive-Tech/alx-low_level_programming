@@ -5,20 +5,27 @@
  *combinations of single-digit numbers.
  *Return: 0 (sucessful)
  */
+
 int main(void)
 {
-	int c = 0;
+	int i, j;
 
-	for (c < 10; c++)
+	for (i = 0; i < 10; i++)
 	{
-		putchar('0' + c);
-		if (c != 9)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(',');
-			putchar(' ');
-		}
+			putchar(i + '0');
+			putchar(j + '0');
 
+			if (i < 8)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
 	}
+
 	putchar('\n');
+
 	return (0);
 }
